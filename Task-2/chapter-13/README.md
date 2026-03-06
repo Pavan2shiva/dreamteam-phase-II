@@ -14,7 +14,7 @@ In this chapter, I created a simple weather finder program using Python and an o
 
 I converted temperature from Kelvin to Celsius and displayed the results clearly for the user. This implementation helped me understand how APIs work in real applications and how Python programs can collect live data from the internet automatically.
 
-## objectives
+## observations
 * Web scraping helps automate repetitive internet tasks.
 * Using modules like requests makes downloading data simple.
 * APIs are useful for structured and reliable data collection.
@@ -22,3 +22,4 @@ I converted temperature from Kelvin to Celsius and displayed the results clearly
 
 ## Conclusion
 Overall, this chapter gave me a practical understanding of how developers collect and process data from the internet using Python. It showed how small automation scripts can save time and make everyday tasks easier.
+
