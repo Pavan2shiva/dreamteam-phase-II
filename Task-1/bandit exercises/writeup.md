@@ -1,7 +1,7 @@
 # Task-1 writeup
 ## Over the wire - bandit 
 
-## introduction
+## Introduction
 In this task, i learned basic Terminal commands, practised essential commands ,explored file systems, analyzed encoded data, managed permissions, debugging strategies.
 
 ## key objectives learned
@@ -192,6 +192,7 @@ cat /etc/bandit_pass/bandit20 | nc -l 1234 &
 suconnect 1234
  ```
 This level, I first viewed the password file for bandit20. Then I opened a local listening port using netcat (nc). After that, I used the suconnect program to connect to my local port and send the password. Since the password matched, the program returned the password for the next level.
+
 
 
 
