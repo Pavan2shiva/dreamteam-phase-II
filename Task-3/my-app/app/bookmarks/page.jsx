@@ -9,15 +9,19 @@ export default function Bookmarks() {
 
   useEffect(() => {
 
-    const token = localStorage.getItem("token");  
+    const token = localStorage.getItem("token");
+
+    if (!token) return;
 
     fetch("http://127.0.0.1:5000/bookmarks", {
       headers: {
-        Authorization: `Bearer ${token}`          
+        Authorization: `Bearer ${token}`
       }
     })
       .then(res => res.json())
-      .then(data => setBooks(data));
+      .then(data => {
+        if (Array.isArray(data)) setBooks(data);
+      });
 
   }, []);
 
@@ -26,15 +30,19 @@ export default function Bookmarks() {
       <Navbar />
 
       <div className="book-container">
-        {books.map((b, i) => (
-          <BookCard
-            key={i}
-            title={b.title}
-            author={b.author}
-            thumbnail={b.thumbnail}
-            preview={b.preview}
-          />
-        ))}
+        {books.length === 0 ? (
+          <p>No bookmarks yet</p>
+        ) : (
+          books.map((b, i) => (
+            <BookCard
+              key={i}
+              title={b.title}
+              author={b.author}
+              thumbnail={b.thumbnail}
+              preview={b.preview}
+            />
+          ))
+        )}
       </div>
     </div>
   );
