@@ -8,9 +8,17 @@ export default function Bookmarks() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/bookmarks")   
+
+    const token = localStorage.getItem("token");  
+
+    fetch("http://127.0.0.1:5000/bookmarks", {
+      headers: {
+        Authorization: `Bearer ${token}`          
+      }
+    })
       .then(res => res.json())
       .then(data => setBooks(data));
+
   }, []);
 
   return (
