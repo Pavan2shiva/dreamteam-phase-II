@@ -47,11 +47,12 @@ http://localhost:3000
 * Used localStorage for token storage
 
 ## Challenges Faced
-* In css, Tailwind.css is not working in next.js, onl showing html structure of website. So I used css modules to implement it
+* In css, Tailwind.css is not working in next.js, only showing html structure of website. So I used css modules to implement it
 * Understand the api integration
 * handling jwt authentication integration
 ## Conclusion
 Finally, In this task i learned Next.js setup,routing and components, usage of API in frontend, Authentication integration(user safety) and understand the frontend architecture
+
 
 
 
