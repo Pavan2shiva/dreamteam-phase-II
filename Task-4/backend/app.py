@@ -9,7 +9,7 @@ CORS(app)
 app.config["JWT_SECRET_KEY"] = "dreamteam123"
 jwt = JWTManager(app)
 
-API = "AIzaSyDgBJjNkWou96G7i5WO36ANrqCQTNz2gYk" 
+API = "" 
 
 @app.route("/login", methods=["POST"])
 def login():
